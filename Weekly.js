@@ -1,4 +1,4 @@
-var Job = require('./Jobs.js')
+import Job from './Jobs.js';
 var job = new Job()
 
 job.on('done', function(details){

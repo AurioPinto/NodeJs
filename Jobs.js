@@ -1,4 +1,4 @@
-const EventEmitter = require('events')
+import EventEmitter from 'events';
 class Job extends EventEmitter {
   constructor(ops) {
     super(ops)
@@ -14,4 +14,4 @@ class Job extends EventEmitter {
   }
 }
 
-module.exports = Job
+export default Job

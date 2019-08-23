@@ -1,6 +1,6 @@
-const http = require('http')
+import { get } from 'http';
 const url = 'http://nodeprogram.com'
-http.get(url, (response) => {
+get(url, (response) => {
   response.on('data', (chunk) => { 
     console.log(chunk.toString('utf8'))
   })

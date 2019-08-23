@@ -1,8 +1,8 @@
-const http = require('http')
+import { request } from 'http';
 const postData = JSON.stringify({ foo: 'bar' })
 
 const options = {
-  hostname: 'mockbin.com',
+  hostname: 'mocking.com',
   port: 80,
   path: '/request?foo=bar&foo=baz',
   method: 'POST',
@@ -12,7 +12,7 @@ const options = {
   }
 }
 
-const req = http.request(options, (res) => {
+const req = request(options, (res) => {
   res.on('data', (chunk) => {
     console.log(`BODY: ${chunk}`)
   })
